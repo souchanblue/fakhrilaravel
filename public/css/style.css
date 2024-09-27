@@ -1,0 +1,239 @@
+/* Style untuk navbar */
+.navbar {
+    background-color: #ffffff; /* Background navbar */
+    padding: 0.15rem 1rem; /* Ubah padding atas dan bawah untuk ukuran lebih kecil */
+}
+
+/* Style default link di navbar */
+.navbar-nav .nav-link {
+    color: #333; /* Warna default link */
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Transisi halus untuk warna dan ketebalan font */
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #ff3366; /* Warna saat di hover */
+}
+
+/* Navbar active (saat halaman yang sesuai sedang dibuka) */
+.navbar-nav .nav-link.active {
+    color: #ff3366 !important; /* Warna active */
+    font-weight: bold; /* Buat font lebih tebal untuk link active */
+}
+
+/* Menambahkan padding pada navbar */
+.navbar-nav {
+    padding: 0; /* Padding navbar */
+}
+
+/* Social media icons */
+.social-media a {
+    color: #333; /* Warna default social media icon */
+    margin-left: 15px; /* Spasi antar icon */
+}
+
+/* Social media icon hover effect */
+.social-media a:hover {
+    color: #ff3366; /* Warna saat hover icon social media */
+}
+
+/* Menambahkan shadow pada navbar */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; /* Shadow untuk navbar */
+}
+
+/* Importing fonts from Google */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Ubah warna latar belakang */
+}
+
+.container {
+    margin-top: 20px; /* Ubah margin agar lebih ke atas */
+}
+
+.container .row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Mengatur kolom */
+.card {
+    position: relative;
+    padding: 0;
+    margin: 0 !important;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 280px;
+    max-height: 340px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image {
+    width: 100%;
+    max-height: 340px;
+}
+
+.card .card-image img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.card .card-content {
+    position: absolute;
+    bottom: -180px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    min-height: 140px;
+    width: 100%;
+    transition: bottom 0.4s ease-in;
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .card-content {
+    bottom: 0px;
+}
+
+.card:hover .card-content h4,
+.card:hover .card-content h5 {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
+.card .card-content h4,
+.card .card-content h5 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition-delay: 0.2s;
+}
+
+.card .card-content h5 {
+    transition: 0.5s;
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card .card-content .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.card .card-content .social-icons li {
+    margin: 10px;
+    transition: 0.5s;
+    transition-delay: calc(0.15s * var(--i));
+    transform: translateY(50px);
+}
+
+.card:hover .card-content .social-icons li {
+    transform: translateY(20px);
+}
+
+.card .card-content .social-icons li a {
+    color: #fff;
+}
+
+.card .card-content .social-icons li a span {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 991.5px) {
+    .container {
+        margin-top: 10px; /* Ubah margin jika perlu */
+    }
+
+    .container .row {
+        margin: 20px 0px;
+    }
+}
+
+.info-section {
+    position: absolute;
+    left: 20px; /* Posisi dari kiri */
+    bottom: 20px; /* Posisi dari bawah */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.8
+    ); /* Background transparan untuk kontras */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-section h2 {
+    color: #333; /* Ubah warna judul */
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    color: #333; /* Ubah warna teks */
+}
+
+.info-section .list-group-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.about-section {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.9
+    ); /* Latar belakang putih transparan */
+    padding: 20px; /* Padding untuk ruang di dalam section */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
+}
+
+.card {
+    border: none; /* Menghilangkan border default */
+    border-radius: 10px; /* Sudut melengkung untuk kartu */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk kedalaman kartu */
+}
+
+.card-image {
+    position: relative;
+}
+
+.card-content {
+    padding: 20px; /* Padding untuk konten kartu */
+    text-align: center; /* Ratakan konten ke tengah */
+}
+
+.about-section h2 {
+    color: #ff3366; /* Warna judul */
+    margin: 20px 0 15px; /* Jarak judul */
+    font-size: 1.8rem; /* Ukuran font judul */
+    font-weight: 600; /* Ketebalan font judul */
+}
+
+.about-section p {
+    color: #333; /* Warna teks */
+    font-size: 1rem; /* Ukuran font untuk paragraf */
+    margin-bottom: 10px; /* Jarak bawah paragraf */
+    line-height: 1.5; /* Jarak antar baris */
+}
